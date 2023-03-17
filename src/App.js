@@ -4,7 +4,7 @@ import "./styles.css";
 export default function App() {
   const initialize = () => {
     console.log("Initialize in fcunction");
-    return 1000 + 2000;
+    return 1000 + 5000;
   };
 
   const initializeCart = () => {
@@ -12,7 +12,7 @@ export default function App() {
 
     return {
       qty: 0,
-      product_id: 0
+      product_id: 0,
     };
   };
 
@@ -28,13 +28,14 @@ export default function App() {
     setCart((prevCart) => {
       return {
         ...prevCart,
-        qty: operator === "+" ? prevCart.qty + 1 : prevCart.qty - 1
+        qty: operator === "+" ? prevCart.qty + 1 : prevCart.qty - 1,
       };
     });
   };
 
   return (
     <div className="App">
+      <p>Hello</p>
       <button onClick={() => setNumber(number - 1)}>-</button>
       <span>{number}</span>
       <button onClick={handleIncrement}>+</button>
